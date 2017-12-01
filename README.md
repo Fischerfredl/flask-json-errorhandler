@@ -1,7 +1,7 @@
 [![pipeline status](https://qgit.de/qerida/py-lib/json-errorhandler/badges/master/pipeline.svg)](https://qgit.de/qerida/py-lib/config-util/commits/master)
 [![coverage report](https://qgit.de/qerida/py-lib/json-errorhandler/badges/master/coverage.svg)](https://qgit.de/qerida/py-lib/config-util/commits/master)
 
-# json-errorhandler
+# flask-json-errorhandler
 Register json errorhandlers for a flask REST server
 
 ## Usage
@@ -9,7 +9,7 @@ Register json errorhandlers for a flask REST server
 ```python 
 from flask import Flask
 
-from json_errorhandler import init_errorhandler(app)
+from flask_json_errorhandler import init_errorhandler(app)
 
 
 def create_app():
