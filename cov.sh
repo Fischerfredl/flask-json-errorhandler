@@ -5,6 +5,6 @@
 set -e
 
 pip install coverage
-coverage run --source=json_errorhandler --branch setup.py test
+coverage run --source=flask_json_errorhandler --branch setup.py test
 coverage report -m
 coverage html
