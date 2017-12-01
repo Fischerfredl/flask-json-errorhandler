@@ -10,7 +10,7 @@ setup(
     name='json-errorhandler',
     description='Register json errorhandlers for a flask REST server',
     long_description=readme(),
-    url='https://qgit.de/qerida/py-lib/json_errorhandler',
+    url='https://qgit.de/qerida/py-lib/flask_json_errorhandler',
 
     version='0.1',
     licence='UNLICENSED',

@@ -3,7 +3,7 @@ import json
 
 import flask
 
-from json_errorhandler import init_errorhandler
+from flask_json_errorhandler import init_errorhandler
 
 
 default_messages = {

@@ -1,12 +1,9 @@
 image: python:2.7
 
-cache:
-  paths:
-    - dist
-
 build:
-  stage: build
+  stage: test
   script:
+    # simple check if build is working
     - python setup.py sdist
 
 test:
@@ -19,12 +16,3 @@ cov:
   script:
     - ./cov.sh
 
-deploy:
-  stage: deploy
-  script:
-    - echo "Releasing dist"
-    - pip install awscli
-    - aws s3 cp dist/ s3://qerida/py-lib/ --recursive --exclude "*" --include "*.tar.gz"
-  artifacts:
-    paths:
-      - dist/*.tar.gz
