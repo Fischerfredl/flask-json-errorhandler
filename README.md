@@ -1,5 +1,5 @@
-[![pipeline status](https://qgit.de/py-lib/flask-json-errorhandler/badges/master/pipeline.svg)](https://qgit.de/qerida/py-lib/config-util/commits/master)
-[![coverage report](https://qgit.de/py-lib/flask-json-errorhandler/badges/master/coverage.svg)](https://qgit.de/qerida/py-lib/config-util/commits/master)
+[![pipeline status](https://qgit.de/py-lib/flask-json-errorhandler/badges/master/pipeline.svg)](https://qgit.de/py-lib/flask-json-errorhandler/commits/master)
+[![coverage report](https://qgit.de/py-lib/flask-json-errorhandler/badges/master/coverage.svg)](https://qgit.de/py-lib/flask-json-errorhandler/commits/master)
 
 # flask-json-errorhandler
 Register json errorhandlers for a flask REST server
