@@ -16,6 +16,8 @@ default_messages = {
     404: 'The requested URL was not found on the server.  If you entered the URL manually please check your spelling '
          'and try again.',
     405: 'The method is not allowed for the requested URL.',
+    409: 'A conflict happened while processing the request.  The resource might have been modified while the request '
+         'was being processed.',
     500: 'internal server error'
 }
 
@@ -47,7 +49,7 @@ class TestErrorhandler(unittest.TestCase):
         self.assertEqual(response.status_code, code)
         self.assertTrue(isinstance(data, dict))
 
-        self.assertIn(default_messages[code], data['error'])
+        self.assertEqual(default_messages[code], data['error'])
 
         # check custom message
         if extended:
@@ -89,6 +91,10 @@ class TestErrorhandler(unittest.TestCase):
     def test_not_allowed(self):
         self.setupRoutes(405, extended=False)
         self.assertResponse(405, extended=False)
+
+    def test_conflict(self):
+        self.setupRoutes(409)
+        self.assertResponse(409)
 
     def test_internal_server_error(self):
         self.setupRoutes(500, extended=False)
