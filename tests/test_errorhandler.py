@@ -18,6 +18,8 @@ default_messages = {
     405: 'The method is not allowed for the requested URL.',
     409: 'A conflict happened while processing the request.  The resource might have been modified while the request '
          'was being processed.',
+    410: 'The requested URL is no longer available on this server and there is no forwarding address. If you followed '
+         'a link from a foreign page, please contact the author of this page.',
     500: 'internal server error'
 }
 
@@ -95,6 +97,10 @@ class TestErrorhandler(unittest.TestCase):
     def test_conflict(self):
         self.setupRoutes(409)
         self.assertResponse(409)
+
+    def test_conflict(self):
+        self.setupRoutes(410)
+        self.assertResponse(410)
 
     def test_internal_server_error(self):
         self.setupRoutes(500, extended=False)
