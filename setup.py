@@ -20,8 +20,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7'
+        'Programming Language :: Python :: 3.6'
     ],
     keywords=['flask', 'json', 'errorhandler'],
     packages=find_packages(exclude=['tests.*', 'tests']),
