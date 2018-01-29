@@ -8,13 +8,13 @@ def readme():
 
 setup(
     name='flask-json-errorhandler',
-    version='1.0.0',
+    version='1.0.1',
     description='Register json errorhandlers for a flask REST server',
     long_description=readme(),
     url='https://github.com/fischerfredl/flask-json-errorhandler',
     author='Alfred Melch',
     author_email='alfred.melch@gmx.de',
-    licence='MIT',
+    license='MIT',
     classifiers=[
         'Framework :: Flask',
         'License :: OSI Approved :: MIT License',
