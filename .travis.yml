@@ -2,21 +2,20 @@ notifications:
   email:
     on_success: never
     on_failure: always
+language: python
+python:
+- '2.7'
+- '3.5'
+- '3.6'
+script:
+  - pip install codecov
+  - python setup.py sdist
+  - python setup.py test
+  - coverage run --source=flask_json_errorhandler --branch setup.py test
+  - coverage report -m
+  - codecov
 jobs:
   include:
-    - stage: test
-      language: python
-      python:
-        - '2.7'
-        - '3.5'
-        - '3.6'
-      script:
-        - pip install codecov
-        - python setup.py sdist
-        - python setup.py test
-        - coverage run --source=flask_json_errorhandler --branch setup.py test
-        - coverage report -m
-        - codecov
     - stage: deploy
       deploy:
         provider: pypi
