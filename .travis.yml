@@ -4,24 +4,20 @@ notifications:
     on_failure: always
 language: python
 python:
-  - "2.7"
-  - "3.5"
-  - "3.6"
-
+- '2.7'
+- '3.5'
+- '3.6'
 script:
 - pip install codecov
-# test sdist + unittests
 - python setup.py sdist
 - python setup.py test
-# test coverage
 - coverage run --source=flask_json_errorhandler --branch setup.py test
-# report coverage
 - coverage report -m
 - codecov
 deploy:
   provider: pypi
   user: Fischerfredl
   password:
-    secure: jH/nwxCYSkY7dhNwGsAHB37oXNLVmTpnzYdN05KaTC0Io/n57osomHGdalMK6htTFizHE/0vvFGvL0sr7OYCGPrZ6kquuvPnglw7BaJPodp1A09TVZrlLKCWQKdeYvI/UAhdlcQK1KlfwyIfBPjGCo7K0Vr2r3KwXApyCX5g863OtcH6+fO3rGLlFyBPXAnPPKVMZnBjraUwGVI+qQ7JJd/kAlRhCo50PWd3KAtRlvCwGNhUX6F/iaQUhU8vvKuQrjK0MT8uxcSCj/LbC98LwNT/SX4bypSBYvJbVYmbmchQcgrdwrlysR3b0p65V00QVSHqNKwVeDn07edrZ/BFKhhkI1N8OtmuagL4zV7HRX+DdKA4nLj/g99TgloMo9PXmJtKk5Hwb+6P1yMv74EDYDqXfRayvKbcizNF87uLzWZCihkCptcrBPu5LeliTkaEfWUtOol7cE591mVfLr/KLOWL9o2yGfODRnkvyyMXDVj/P6dQOnwDaFywCfj8GYHgfI8vCUWEf/sDWS8pdbN9xz52q6OhhdXgVf97kepEb1ds1Yq8W1DHHrkpxDs9ue9kTigBb3vlO4nBBGFNO9YAVgh+OEXeHGhSMVMdacoPLA9l991I+xhOJs30faUL4rGMjMGkCgqXwk3VMJ0ExiiiqcmuoJfJiknz5RBqYiQXkwc=
+    secure: YnN2sonM2ELcNBe44RP2aBp1BrnTehe6UOtPEU1gwDHo4UEj6LDdTaJ6rvkOcaU0iMRiWaPhwv0iGTpzULs/xXcXJG6qoghOEh3W73RwZMDTzlFzauoxDve2TVXmAaMC2IIkhfpq893Nosm/WgPILq4r65q4AXrdHtCq5nEKoBhRCvY+eT5tYt8RfD5eGHOzLhhpajQIp4l6ILcxGZuBVl5DQyY5TrbUXzKefMzzApipJ0xO7g+/Bqwz5MuM13B1ajKja+Yk3QDEyvdKkreilU+ClVeQu8OSRVjFnfcHJVX53r8IlzMERCP5lU5DKkSe8MB+N8kE6+2F4VmTrJPTPBqanF/QfHPNeKIAVa+f58D5Qe/g/B+FGXq5IT//VkNLTzo7ieA6uZqcmWa40KJ2ZgEF4zTvqXG6a0XF4dN2zp1ItmarhxTaYQ/S5SNKU0GaRt8XJshRwmJfiWWwMi5QIJPjnvVM0bPTna+PiRYJ08IiM3zS6xBzbXgt+VVB0PsDsREySOYIJKXZMo5dM9YZBe6QxWV8ZBfKmfmRAAu+jWr2F1H7xBnPl/ibyQDSD11QXStUaEPCbQceB6d11rlGCrpFd8dD1VeffAHGpGrDRsb7Fbnnu8pa44+M/+4ooi79QptKahCyrI8qRdniXio12rj5VAELCR416c/gQMMCSUU=
   on:
     tags: true

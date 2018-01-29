@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='flask-json-errorhandler',
-    version='1.0.1',
+    version='1.0.2',
     description='Register json errorhandlers for a flask REST server',
     long_description=readme(),
     url='https://github.com/fischerfredl/flask-json-errorhandler',
