@@ -1,5 +1,8 @@
-[![pipeline status](https://qgit.de/py-lib/flask-json-errorhandler/badges/master/pipeline.svg)](https://qgit.de/py-lib/flask-json-errorhandler/commits/master)
-[![coverage report](https://qgit.de/py-lib/flask-json-errorhandler/badges/master/coverage.svg)](https://qgit.de/py-lib/flask-json-errorhandler/commits/master)
+[![version](https://img.shields.io/pypi/v/flask-json-errorhandler.svg)](https://pypi.python.org/pypi/flask-json-errorhandler)
+[![license](https://img.shields.io/pypi/l/flask-json-errorhandler.svg)](https://pypi.python.org/pypi/flask-json-errorhandler)
+[![pyversions](https://img.shields.io/pypi/pyversions/flask-json-errorhandler.svg)](https://pypi.python.org/pypi/flask-json-errorhandler)
+[![pipeline status](https://travis-ci.org/Fischerfredl/flask-json-errorhandler.svg?branch=master)](https://travis-ci.org/Fischerfredl/flask-json-errorhandler)
+[![coverage](https://img.shields.io/codecov/c/github/fischerfredl/flask-json-errorhandler.svg)](https://codecov.io/gh/Fischerfredl/flask-json-errorhandler)
 
 # flask-json-errorhandler
 Register json errorhandlers for a flask REST server
@@ -18,11 +21,6 @@ def create_app():
 ```
 
 ## Testing
-Normal:
 ```python
 python setup.py test
 ```
-
-For coverage use the python coverage package. See ```/cov.sh``` for usage. 
-
-```./cov.sh``` will pip install coverage. So make sure to use it in the context of your virtual env.
